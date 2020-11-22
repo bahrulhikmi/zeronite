@@ -16,7 +16,7 @@ namespace Zeronite.Infra.EntityFrameworkCore
             var configuration = BuildConfiguration();
 
             var builder = new DbContextOptionsBuilder<InfraMigrationsDbContext>()
-                .UseSqlServer(configuration.GetConnectionString("Default"));
+                .UseMySql(configuration.GetConnectionString("Default"));
 
             return new InfraMigrationsDbContext(builder.Options);
         }
