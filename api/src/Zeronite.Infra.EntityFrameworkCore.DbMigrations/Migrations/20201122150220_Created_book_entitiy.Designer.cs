@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Volo.Abp.EntityFrameworkCore;
 using Zeronite.Infra.EntityFrameworkCore;
@@ -9,9 +10,10 @@ using Zeronite.Infra.EntityFrameworkCore;
 namespace Zeronite.Infra.Migrations
 {
     [DbContext(typeof(InfraMigrationsDbContext))]
-    partial class InfraMigrationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201122150220_Created_book_entitiy")]
+    partial class Created_book_entitiy
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

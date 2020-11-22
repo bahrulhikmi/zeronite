@@ -5,6 +5,7 @@ using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.Identity;
 using Volo.Abp.Users.EntityFrameworkCore;
+using Zeronite.Infra.Books;
 
 namespace Zeronite.Infra.EntityFrameworkCore
 {
@@ -21,6 +22,8 @@ namespace Zeronite.Infra.EntityFrameworkCore
     public class InfraDbContext : AbpDbContext<InfraDbContext>
     {
         public DbSet<AppUser> Users { get; set; }
+
+        public DbSet<Book> Books { get; set; }
 
         /* Add DbSet properties for your Aggregate Roots / Entities here.
          * Also map them inside InfraDbContextModelCreatingExtensions.ConfigureInfra
